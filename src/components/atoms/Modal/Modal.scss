@@ -1,0 +1,13 @@
+@use "@styles/variables" as *;
+
+.ModalBackground {
+  background-color: transparent;
+  position: fixed;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
