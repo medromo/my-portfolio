@@ -1,0 +1,64 @@
+@use "@styles/variables" as *;
+
+.HomePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  .Hero {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    h1 {
+      grid-column: 1 / -1;
+      font-size: 5rem;
+      grid-row: 2 / span 1;
+    }
+    span {
+      font-size: 2.5rem;
+    }
+    &__greeting {
+      grid-row: 1 / span 1;
+      grid-column: 1 / -1;
+    }
+    &__position {
+      grid-row: 3 / span 1;
+      grid-column: 1 / -1;
+    }
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      margin-top: 15px;
+      grid-column: 1 / -1;
+      justify-self: center;
+      button {
+        margin: 15px;
+      }
+    }
+  }
+}
+
+// @media (min-width: 750px) {
+//   .HomePage {
+//     .Hero {
+//       grid-template-columns: repeat(8, minmax(0, 1fr));
+//       &__btns {
+//         flex-direction: row;
+//       }
+//     }
+//   }
+// }
+
+@include for-size(s) {
+  .HomePage {
+    .Hero {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      &__btns {
+        flex-direction: row;
+      }
+    }
+  }
+}

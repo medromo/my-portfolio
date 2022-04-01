@@ -1,0 +1,12 @@
+.Header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 3rem;
+  .NavBar {
+    &-links {
+      display: inline-block;
+    }
+  }
+}

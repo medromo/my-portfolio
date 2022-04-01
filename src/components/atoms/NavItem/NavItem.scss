@@ -1,0 +1,14 @@
+@use '@styles/variables' as *;
+
+.NavItem {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  span {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+}

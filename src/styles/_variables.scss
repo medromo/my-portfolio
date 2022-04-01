@@ -1,9 +1,39 @@
+$xs: 360px;
+$s: 450px;
+$m: 768px;
+$l: 1280px;
+$xl: 1440px;
+
+@mixin for-size($size) {
+  @if $size == xs {
+    @media (max-width: $s) {
+      @content;
+    }
+  } @else if $size == s {
+    @media (min-width: $s) {
+      @content;
+    }
+  } @else if $size == m {
+    @media (min-width: $s) {
+      @content;
+    }
+  } @else if $size == l {
+    @media (min-width: $s) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $s) {
+      @content;
+    }
+  }
+}
+
 $primary-color: #fff;
-$secondary-color: #A8D99A;
-$light-gray: #F2F2F2;
+$secondary-color: #a8d99a;
+$light-gray: #f2f2f2;
 $gray: #7d7c7c;
 $highlight-color: rgba(84, 173, 240, 0.7);
-$ready-green-color : #97EC9D;
+$ready-green-color: #97ec9d;
 
 $modal-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
